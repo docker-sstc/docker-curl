@@ -2,28 +2,22 @@
 
 ## Usage
 
-- Help: `docker run --rm sstc/curl --help`
-- Version: `docker run --rm sstc/curl --version`
-- which: `docker run --rm --entrypoint=which sstc/curl curl`
-
-- get
-
 ```sh
+# help
+docker run --rm sstc/curl --help
+
+# version
+docker run --rm sstc/curl --version
+
+# which
+docker run --rm --entrypoint=which sstc/curl curl
+
+# get
 docker run --rm sstc/curl -v https://google.com
-```
 
-- post
-
-```sh
-docker run --rm \
-sstc/curl -v \
+# post
+docker run --rm sstc/curl -v \
 -XPOST \
 --header 'Content-Type: application/json' \
--d '{"hello":"world"}' https://example.com
+-d '{"hello":"world"}' https://echo.3cm.app
 ```
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/).
-
-[alpine]:https://hub.docker.com/_/alpine/
